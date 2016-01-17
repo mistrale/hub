@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EverywhereWindow</class>
+ <widget class="QWidget" name="EverywhereWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>1500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1012</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="2" column="0" colspan="2">
+     <widget class="QWidget" name="globalWidget" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>750</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#globalWidget {
+	background: url(&quot;C:/everywhere/images/newBackground.png&quot;);
+}</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>751</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="menuLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="1">
+         <widget class="QWidget" name="researchWidget" native="true">
+          <widget class="QPushButton" name="researchButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/researchBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/researchBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="synchronizationWidget" native="true">
+          <widget class="QPushButton" name="synchronizationButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/synchronizationBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/synchronizationBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QWidget" name="radioWidget" native="true">
+          <widget class="QPushButton" name="radioButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/radioBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/radioBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QWidget" name="streamWidget" native="true">
+          <widget class="QPushButton" name="streamButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/streamBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/streamBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QWidget" name="downloadWidget" native="true">
+          <widget class="QPushButton" name="downloadButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/downloadBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/downloadBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QWidget" name="profilWidget" native="true">
+          <widget class="QPushButton" name="profilButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/profilBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/profilBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QWidget" name="newWidget" native="true">
+          <widget class="QPushButton" name="libraryButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/libraryBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/libraryBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QWidget" name="disconnectWidget" native="true">
+          <widget class="QPushButton" name="disconnectButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/disconnectBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/disconnectBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="libraryWidget" native="true">
+          <widget class="QPushButton" name="newButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/newBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/newBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QWidget" name="menuWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>1000</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(40, 40, 40);
+
+	border:1px solid white;
+</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>52</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="menuButton">
+          <property name="minimumSize">
+           <size>
+            <width>36</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>3</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#menuButton {
+	border: none;
+	background: transparent;
+	background: url(C:/everywhere/images/menuButton.png);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>36</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="searchEdit">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit#searchEdit {
+	margin-left: 100px;
+	background: white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius:5px;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="serviceBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox#serviceBox {
+	border:none;
+	background:white;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Youtube</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Soundcloud</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchButton">
+          <property name="minimumSize">
+           <size>
+            <width>177</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>177</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#searchButton {
+ 	background-color: white;
+ 	border-style: solid;
+ 	border-width:1px;
+ 	border-radius:5px;
+ 	max-width:25px;
+ 	max-height:25px;
+ 	min-width:25px;
+ 	min-height:25px;
+	margin-right:150px;
+	background: url(C:/everywhere/images/searchButton.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="friendsButton">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#friendsButton {
+	border: none;
+	background: url(C:/Everywhere/images/friendsButton.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/images/friendsButton.png</normaloff>:/images/friendsButton.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>36</width>
+            <height>36</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="messageButton">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#messageButton {
+	border: none;
+	background: url(C:/everywhere/images/messageButton.png)no-repeat;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="notifButton">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#notifButton {
+	border: none;
+	background: url(C:/everywhere/images/notifButton.png)no-repeat;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="optionButton">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#optionButton {
+	border: none;
+	background: url(C:/everywhere/images/optionButton.png)no-repeat;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logoutButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#logoutButton {
+	border: none;
+	background: url(C:/Everywhere/images/logoutButton.png) no-repeat;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

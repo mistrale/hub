@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Connection</class>
+ <widget class="QWidget" name="Connection">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:transparent;</string>
+  </property>
+  <widget class="QWidget" name="mainWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>431</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgba(86, 86, 86, 86, 0.7);</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>431</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="7" column="0">
+      <widget class="QLabel" name="warningText">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>10</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#warningText {
+background: transparent;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;
+	color :red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="forgotPassword">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#forgotPassword {
+	border:none;
+	color: white;
+	
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	text-decoration: underline;
+	background:transparent;
+	font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>Forgot password ?</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="ring">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="orLabel">
+       <property name="styleSheet">
+        <string notr="true">QLabel#orLabel {
+	border:none;
+	color: white;
+	
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	text-decoration: underline;
+	background:transparent;
+	font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>No account ?</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLineEdit" name="emailEdit">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit#emailEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+       </property>
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="facebookButton">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#facebookButton {
+	background: url(C:/Everywhere/images/facebook-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#facebookButton:pressed {
+	background: url(C:/Everywhere/images/facebook-signin-pressed.png) no-repeat;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="googleButton">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#googleButton {
+	background: url(C:/Everywhere/images/google-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#googleButton:pressed {
+	background: url(C:/Everywhere/images/google-signin-pressed.png) no-repeat;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLineEdit" name="passwordEdit">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit#passwordEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/lock.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="signinButton">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#signinButton {
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
+	border-radius:10px;
+	color: white;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;
+}
+
+QPushButton#signinButton:pressed {
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
+}</string>
+       </property>
+       <property name="text">
+        <string>Sign up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="connectionLabel">
+       <property name="minimumSize">
+        <size>
+         <width>471</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#connectionLabel {
+	background:rgba(3, 151, 229, 0.7);
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string>SIGNIN</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QCheckBox" name="connectedBox">
+       <property name="styleSheet">
+        <string notr="true">QCheckBox#connectedBox {
+	color: white;
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>Register account</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QPushButton" name="connectButton">
+       <property name="minimumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>190</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#connectButton {
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
+	border-radius:10px;
+	color: white;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;
+}
+
+QPushButton#connectButton:pressed {
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
+}</string>
+       </property>
+       <property name="text">
+        <string>Signin</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

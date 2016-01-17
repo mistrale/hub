@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registration</class>
+ <widget class="QWidget" name="Registration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="mainWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#mainWidget {
+	background: rgba(86,86,86, 0.7);
+}</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>501</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="3">
+      <widget class="QWidget" name="registrationWidget" native="true">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget#registrationWidget {
+	background: rgba(3, 151, 229, 0.7);
+	margin-bottom: 10px;
+}</string>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-1</y>
+          <width>501</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>13</number>
+         </property>
+         <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+          <widget class="QPushButton" name="backButton">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#backButton {
+	border:none;
+	background: url(C:/everywhere/images/back.png);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>images/back.png</normaloff>images/back.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="registrationLabel">
+           <property name="styleSheet">
+            <string notr="true">QLabel#registrationLabel {
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	color: white;
+	font-weight: bold;
+}</string>
+           </property>
+           <property name="text">
+            <string>SIGN UP</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QWidget" name="widget_5" native="true">
+       <property name="styleSheet">
+        <string notr="true">background: rgba(86,86,86, 0);</string>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>233</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="emailEdit">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#emailEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+           </property>
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="usernameEdit">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#usernameEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
+	padding-left: 45px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+	margin-left: 20px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Username</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="firstnameEdit">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#firstnameEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+           </property>
+           <property name="text">
+            <string>Firstname</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="lastnameEdit">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#lastnameEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+           </property>
+           <property name="text">
+            <string>Lastname</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="passwordEdit">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#passwordEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/lock.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+           </property>
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="passwordConfirmationEdit">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#passwordConfirmationEdit {
+	border-radius: 10px;
+	background: url(C:/Everywhere/images/lock.png)  no-repeat;
+	padding-left: 45 px;
+	color: rgb(3, 151, 229);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	border: 1px solid rgb(3, 151, 229);
+}</string>
+           </property>
+           <property name="text">
+            <string>Password Confirmation</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="signinButton">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#signinButton {
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
+	border-radius:10px;
+	color: white;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;
+}
+
+QPushButton#signinButton:pressed {
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
+}</string>
+           </property>
+           <property name="text">
+            <string>S'enregister</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="warningText">
+           <property name="maximumSize">
+            <size>
+             <width>220</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="ring">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QWidget" name="widget_3" native="true">
+       <property name="styleSheet">
+        <string notr="true">background: rgba(86,86,86, 0);</string>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>211</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="googleButton">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#googleButton {
+	background: url(C:/Everywhere/images/google-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#googleButton:pressed {
+	background: url(C:/Everywhere/images/google-signin-pressed.png) no-repeat;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="facebookButton">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#facebookButton {
+	background: url(C:/Everywhere/images/facebook-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#facebookButton:pressed {
+	background: url(C:/Everywhere/images/facebook-signin-pressed.png) no-repeat;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QWidget" name="widget_4" native="true">
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: url(C:/Everywhere/images/separator.gif) no-repeat;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
