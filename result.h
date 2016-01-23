@@ -30,6 +30,9 @@ namespace GUI {
         void        error(QNetworkReply::NetworkError error);
         void        seek(int);
         void        durationChanged(qint64);
+        void        volumeChanged(int);
+        void        managePlayPause();
+        void        manageVolume();
 
     private:
         Ui::Result *ui;
@@ -41,6 +44,9 @@ namespace GUI {
 
         Tool::RequestManager   _manager;
         QNetworkReply           *_reply;
+
+        bool            _play;
+        bool            _volumeoff;
     };
 }
 

@@ -16,8 +16,8 @@ GUI::Result::Result(QWidget *parent) :
     _player = new QMediaPlayer(this);
     _playlist = new QMediaPlaylist(this);
 
-    QUrl    url(QUrl::fromLocalFile("C:/Users/audes_000/Downloads/test/test.mp4"));
-    QUrl    url2("http:\/\/www.dailymotion.com\/cdn\/H264-320x240\/video\/x3h2ydm.mp4?auth=1452873516-2562-i4oocjt8-0922a9657b2800d8844b2081d1ce41c0");
+  //  QUrl    url(QUrl::fromLocalFile("C:/Users/audes_000/Downloads/test/test.mp4"));
+  //  QUrl    url2("http:\/\/www.dailymotion.com\/cdn\/H264-320x240\/video\/x3h2ydm.mp4?auth=1452873516-2562-i4oocjt8-0922a9657b2800d8844b2081d1ce41c0");
  //   _playlist->addMedia(url2);
     //std::cout << "C'est valide " << url.isValid() << std::endl;
     _playlist->setCurrentIndex(1);
@@ -25,16 +25,15 @@ GUI::Result::Result(QWidget *parent) :
     _player->setVideoOutput(ui->video);
     ui->slider->setRange(0, _player->duration() / 1000);
 
+    connect(ui->slider, SIGNAL(valueChanged(int)), this, SLOT(seek(int)));
     connect(ui->slider, SIGNAL(sliderMoved(int)), this, SLOT(seek(int)));
     connect(_player, SIGNAL(durationChanged(qint64)), this, SLOT(durationChanged(qint64)));
- //  _player->play();
-   std::cout << _player->duration() << std::endl;
-
-
-  //  test = new QPushButton(this);
-  // test->setText("PWET");
-  //  test->setGeometry(0 , 0, 200, 200);
-  //  test->show();
+    connect(ui->playButton, SIGNAL(clicked()), this, SLOT(managePlayPause()));
+    connect(ui->volumeButton, SIGNAL(clicked()), this, SLOT(manageVolume()));
+    connect(ui->volumeSlider, SIGNAL(sliderMoved(int)), this, SLOT(volumeChanged(int)));
+    ui->volumeSlider->setRange(0, 100);
+    ui->volumeSlider->setValue(50);
+    ui->video->showFullScreen();
 }
 
 GUI::Result::~Result()
@@ -43,7 +42,44 @@ GUI::Result::~Result()
 }
 
 void    GUI::Result::initialize() {
+    _play = true;
+    _volumeoff = false;
+}
 
+void    GUI::Result::volumeChanged(int volume) {
+    _player->setVolume(volume);
+}
+
+void    GUI::Result::manageVolume() {
+    if (_volumeoff) {
+        _volumeoff = false;
+        _player->setMuted(false);
+        ui->volumeButton->setStyleSheet("QPushButton#volumeButton {"
+                                        "background: url(C:/everywhere/images/volume-high.png);"
+                                        "width : 36 px; height : 36 px; border : none;}");
+    } else {
+        _volumeoff = true;
+        _player->setMuted(true);
+        ui->volumeButton->setStyleSheet("QPushButton#volumeButton {"
+                                        "background: url(C:/everywhere/images/volume-off.png);"
+                                        "width : 36 px; height : 36 px; border : none;}");
+    }
+}
+
+void    GUI::Result::managePlayPause() {
+    if (_play) {
+        _play = false;
+        _player->pause();
+        ui->playButton->setStyleSheet("QPushButton#playButton {"
+                                      "background: url(C:/everywhere/images/play.png);"
+                                      "width : 36 px; height : 36 px; border : none;}");
+    } else {
+        _play = true;
+        _player->play();
+        ui->playButton->setStyleSheet("QPushButton#playButton {"
+                                      "background: url(C:/everywhere/images/pause.png);"
+                                      "width : 36 px; height : 36 px; border : none;}");
+    }
 }
 
 void    GUI::Result::seek(int duration) {
@@ -77,7 +113,6 @@ void    GUI::Result::finished(QNetworkReply *reply) {
             }
 
             // XXX hardcoded
-            std::cout << values.size() << std::endl;
            // std::cout << values.last().toStdString() << std::endl;
             _playlist->addMedia(QUrl(values.front()));
             _player->play();

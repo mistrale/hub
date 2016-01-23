@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1001</width>
     <height>750</height>
    </rect>
   </property>
@@ -30,11 +30,822 @@
 	background: url(&quot;C:/everywhere/images/libraryBackground.png&quot;);
 }</string>
       </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>751</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="player" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>675</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>675</width>
+            <height>500</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget#widget_2 {
+	background: black;
+}</string>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>671</width>
+             <height>401</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QVideoWidget" name="video" native="true">
+              <property name="styleSheet">
+               <string notr="true">background: black;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="controls" native="true">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QWidget#controls {
+	background : black;
+}</string>
+              </property>
+              <widget class="QWidget" name="horizontalLayoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>671</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="playButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton#playButton {
+	background: url(C:/everywhere/images/pause.png) no-repeat;
+	border: none;
+	height: 36 px;
+	width: 36 px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="previousButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton#previousButton {
+	background: url(C:/everywhere/images/skip-previous.png) no-repeat;
+	border: none;
+	height: 36 px;
+	width: 36 px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="nextButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton#nextButton {
+	background: url(C:/everywhere/images/skip-next.png) no-repeat;
+	border: none;
+	height: 36 px;
+	width: 36 px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="durationSlider">
+                  <property name="styleSheet">
+                   <string notr="true">QSlider#durationSlider {
+	padding-right: 10px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 6px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+    margin: 2px 0;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 3px;
+}</string>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="volumeButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton#volumeButton {
+	background: url(C:/everywhere/images/volume-high.png) no-repeat;
+	border: none;
+	height: 36 px;
+	width: 36 px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="volumeSlider">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="playlist" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>291</width>
+             <height>401</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <item>
+             <widget class="QComboBox" name="comboBox">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Playlist</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_2" native="true">
+              <widget class="QWidget" name="verticalLayoutWidget_4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>291</width>
+                 <height>371</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4"/>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTabWidget" name="libraryTab">
+          <property name="styleSheet">
+           <string notr="true">QTabWidget#libraryTab {
+	border: 1px solid black;
+}
+
+QTabBar::tab {
+    background: white;
+    border: 1px solid black;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    width: 325px;
+	border-bottom: 5px solid white;
+	color: rgb(3,151,229);
+	font: 9pt &quot;MS Shell Dlg 2&quot;;
+	font-weight:bold;
+	height: 40px;
+}
+
+QTabBar::tab:hover {
+	border-bottom: 5px solid rgb(3,151,229);
+	color: rgb(68, 68, 68);
+}
+
+QTabBar::tab:selected {
+	border-bottom: 5px solid rgb(70, 70, 70);
+	background : rgb(3, 151, 229,);
+	color: white;
+}
+
+QTabWidget,QTabWidget::pane, QTabBar { 
+	background: rgba(70,70,70,0.6) ; 
+	border: 1px solid black;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="All">
+           <property name="styleSheet">
+            <string notr="true">QWidget#All {
+	background: rgba(235, 235, 235, 0.4);
+}</string>
+           </property>
+           <attribute name="title">
+            <string>All</string>
+           </attribute>
+           <widget class="QScrollArea" name="scrollArea_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>981</width>
+              <height>281</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QScrollArea#scrollArea_2 {
+	background: transparent;
+}</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>979</width>
+               <height>279</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#scrollAreaWidgetContents_2 {
+	background: transparent;
+}</string>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>981</width>
+                <height>281</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="4">
+                <widget class="QLineEdit" name="lineEdit">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>27</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">margin : 0px;
+padding: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Rechercher...</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5" alignment="Qt::AlignRight">
+                <widget class="QScrollBar" name="verticalScrollBar">
+                 <property name="styleSheet">
+                  <string notr="true"> QScrollBar:vertical {
+     border: 2px solid grey;
+     background: rgb(209, 209, 209);
+     width: 15px;
+     margin: 22px 0 22px 0;
+ }
+ QScrollBar::handle:vertical {
+     background: white;
+     min-height: 20px;
+ }
+ QScrollBar::add-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     border: 2px solid grey;
+     width: 3px;
+     height: 3px;
+     background: white;
+ }
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QPushButton" name="searchButton">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Ok</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="titleButton">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>Title</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="albumButton">
+                 <property name="text">
+                  <string>Album</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="artistButton">
+                 <property name="text">
+                  <string>Artist</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="typeButton">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Type</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="Music">
+           <property name="styleSheet">
+            <string notr="true">QWidget#Music {
+	background: rgba(235, 235, 235, 0.3);
+}</string>
+           </property>
+           <attribute name="title">
+            <string>Music</string>
+           </attribute>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>981</width>
+              <height>281</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QScrollArea#scrollArea {
+	background: transparent;
+}</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>979</width>
+               <height>279</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#scrollAreaWidgetContents {
+	background: transparent;
+}</string>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_3">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>981</width>
+                <height>281</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="4">
+                <widget class="QLineEdit" name="lineEdit_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>27</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">margin : 0px;
+padding: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Rechercher...</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5" alignment="Qt::AlignRight">
+                <widget class="QScrollBar" name="verticalScrollBar_2">
+                 <property name="styleSheet">
+                  <string notr="true"> QScrollBar:vertical {
+     border: 2px solid grey;
+     background: rgb(209, 209, 209);
+     width: 15px;
+     margin: 22px 0 22px 0;
+ }
+ QScrollBar::handle:vertical {
+     background: white;
+     min-height: 20px;
+ }
+ QScrollBar::add-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     border: 2px solid grey;
+     width: 3px;
+     height: 3px;
+     background: white;
+ }
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QPushButton" name="searchButton_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Ok</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="titleButton_2">
+                 <property name="text">
+                  <string>Title</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="albumButton_2">
+                 <property name="text">
+                  <string>Album</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="artistButton_2">
+                 <property name="text">
+                  <string>Artist</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="typeButton_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Type</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="Video">
+           <property name="styleSheet">
+            <string notr="true">QWidget#Video {
+	background: rgba(235, 235, 235, 0.3);
+}</string>
+           </property>
+           <attribute name="title">
+            <string>Video</string>
+           </attribute>
+           <widget class="QScrollArea" name="scrollArea_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>981</width>
+              <height>281</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QScrollArea#scrollArea_3 {
+	background: transparent;
+}</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>979</width>
+               <height>279</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#scrollAreaWidgetContents_3 {
+	background: transparent;
+}</string>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_4">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>981</width>
+                <height>281</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="4">
+                <widget class="QLineEdit" name="lineEdit_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>27</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">margin : 0px;
+padding: 0px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Rechercher...</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5" alignment="Qt::AlignRight">
+                <widget class="QScrollBar" name="verticalScrollBar_3">
+                 <property name="styleSheet">
+                  <string notr="true"> QScrollBar:vertical {
+     border: 2px solid grey;
+     background: rgb(209, 209, 209);
+     width: 15px;
+     margin: 22px 0 22px 0;
+ }
+ QScrollBar::handle:vertical {
+     background: white;
+     min-height: 20px;
+ }
+ QScrollBar::add-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 2px solid grey;
+     background:  rgb(209, 209, 209);
+     height: 20px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     border: 2px solid grey;
+     width: 3px;
+     height: 3px;
+     background: white;
+ }
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }</string>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QPushButton" name="searchButton_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Ok</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="titleButton_3">
+                 <property name="text">
+                  <string>Title</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QPushButton" name="albumButton_3">
+                 <property name="text">
+                  <string>Album</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" alignment="Qt::AlignTop">
+                <widget class="QPushButton" name="artistButton_3">
+                 <property name="text">
+                  <string>Artist</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="typeButton_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Type</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>qvideowidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
