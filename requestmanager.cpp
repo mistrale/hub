@@ -15,6 +15,16 @@ Tool::RequestManager::~RequestManager() {
     delete manager;
 }
 
+QNetworkReply   *Tool::RequestManager::researchRequest(const QString &search, const QString &provider,
+                                                       const QString &kind, const QString &token) {
+    QUrl        url("http://62.210.237.116:8080/search?provider=" + provider + "&kind=" + kind + "&keyword=" + search);
+    QNetworkRequest   request(url);
+
+    request.setRawHeader("authentication-token", token.toStdString().c_str());
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    return manager->get(request);
+}
+
 QNetworkReply   *Tool::RequestManager::updateProfilRequest(const QString &username, const QString &password,
                                                            const QString &firstname, const QString &lastname, const QString &emailPrivate,
                                                            const QString &firstnamePrivate, const QString &lastnamePrivate, const QString &token) {

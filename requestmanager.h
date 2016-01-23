@@ -18,6 +18,7 @@ namespace Tool {
         QNetworkReply   *updateProfilRequest(const QString &username, const QString &password,
                                              const QString &firstname, const QString &lastname, const QString &emailPrivate,
                                              const QString &firstnamePrivate, const QString &lastnamePrivate, const QString &token);
+        QNetworkReply   *researchRequest(const QString &search, const QString &provider, const QString &kind, const QString &token);
 
         QNetworkAccessManager       *manager;
     };

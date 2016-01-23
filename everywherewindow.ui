@@ -462,7 +462,7 @@ QPushButton:hover {
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="serviceBox">
+         <widget class="QComboBox" name="providerBox">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -476,19 +476,24 @@ QPushButton:hover {
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">QComboBox#serviceBox {
+           <string notr="true">QComboBox#providerBox {
 	border:none;
 	background:white;
 }</string>
           </property>
           <item>
            <property name="text">
-            <string>Youtube</string>
+            <string>all</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Soundcloud</string>
+            <string>youtube</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>soundcloud</string>
            </property>
           </item>
          </widget>

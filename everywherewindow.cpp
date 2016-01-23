@@ -12,6 +12,7 @@
 #include "stream.h"
 #include "resultsearch.h"
 #include "result.h"
+#include "localdata.h"
 
 #include <QDebug>
 #include <QPropertyAnimation>
@@ -120,6 +121,11 @@ void            GUI::EverywhereWindow::showResult() {
 }
 
 void            GUI::EverywhereWindow::getSearchResult() {
+    Model::LocalData    *data = Model::LocalData::instance();
+    data->Values["keyword"] = ui->searchEdit->text();
+    data->Values["provider"] = ui->providerBox->currentText();
+    data->Values["kind"] = QString("video");
+
     QObject* senderObj = sender();
     _current.second->hide();
 
@@ -130,13 +136,13 @@ void            GUI::EverywhereWindow::getSearchResult() {
     ui->globalWidget->update();
 
     _current = _menuWidgets[senderObj->objectName()];
-
     if (_menuOpen) {
         manageMenu();
         QTimer::singleShot(400, this, SLOT(updateView()));
     } else {
         _current.second->show();
     }
+    _current.second->initialize();
 }
 
 void            GUI::EverywhereWindow::switchView() {

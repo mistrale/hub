@@ -33,7 +33,8 @@ SOURCES += main.cpp\
     localdata.cpp \
     resultsearch.cpp \
     result.cpp \
-    awidget.cpp
+    awidget.cpp \
+    videosearch.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
@@ -52,7 +53,8 @@ HEADERS  += mainwindow.h \
     localdata.h \
     resultsearch.h \
     result.h \
-    awidget.h
+    awidget.h \
+    videosearch.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
