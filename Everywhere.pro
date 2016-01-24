@@ -34,7 +34,9 @@ SOURCES += main.cpp\
     resultsearch.cpp \
     result.cpp \
     awidget.cpp \
-    videosearch.cpp
+    videosearch.cpp \
+    button.cpp \
+    aprovider.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
@@ -54,7 +56,9 @@ HEADERS  += mainwindow.h \
     resultsearch.h \
     result.h \
     awidget.h \
-    videosearch.h
+    videosearch.h \
+    button.h \
+    aprovider.h
 
 FORMS    += mainwindow.ui \
     connection.ui \

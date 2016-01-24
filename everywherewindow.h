@@ -11,6 +11,7 @@
 
 #include <QGraphicsItemAnimation>
 
+#include "videosearch.h"
 #include "awidget.h"
 
 namespace Ui {

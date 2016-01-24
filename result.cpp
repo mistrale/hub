@@ -1,5 +1,6 @@
 #include "result.h"
 #include "ui_result.h"
+#include "localdata.h"
 
 #include <iostream>
 
@@ -9,9 +10,7 @@ GUI::Result::Result(QWidget *parent) :
 {
     ui->setupUi(this);
 
-   _reply = _manager.manager->get(QNetworkRequest(QUrl("https://www.youtube.com/watch?v=ZSKusF-4i0w")));
-    connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), SLOT(error(QNetworkReply::NetworkError)));
-    connect(_manager.manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(finished(QNetworkReply *)));
+    connect(_manager.manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(getFlow(QNetworkReply *)));
 
     _player = new QMediaPlayer(this);
     _playlist = new QMediaPlaylist(this);
@@ -44,6 +43,17 @@ GUI::Result::~Result()
 void    GUI::Result::initialize() {
     _play = true;
     _volumeoff = false;
+    _player->stop();
+    _playlist->clear();
+
+    Model::LocalData    *data = Model::LocalData::instance();
+    QVariantMap         item = data->Values["media"].toMap();
+    QString             url = item["url"].toString();
+    url.insert(4, 's');
+    url.insert(8, "www.");
+    qDebug() << url;
+    _reply = _manager.manager->get(QNetworkRequest(QUrl(url)));
+    connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), SLOT(error(QNetworkReply::NetworkError)));
 }
 
 void    GUI::Result::volumeChanged(int volume) {
@@ -90,7 +100,7 @@ void    GUI::Result::durationChanged(qint64 duration) {
    ui->slider->setMaximum(duration / 1000);
 }
 
-void    GUI::Result::finished(QNetworkReply *reply) {
+void    GUI::Result::getFlow(QNetworkReply *reply) {
     int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
     std::cout << "resutl search ok : " << statusCode << std::endl;
     if (statusCode >= 200 && statusCode < 300) {
@@ -114,6 +124,8 @@ void    GUI::Result::finished(QNetworkReply *reply) {
 
             // XXX hardcoded
            // std::cout << values.last().toStdString() << std::endl;
+            qDebug() << values.front();
+            qDebug() << values.back();
             _playlist->addMedia(QUrl(values.front()));
             _player->play();
         }

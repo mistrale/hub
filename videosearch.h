@@ -10,7 +10,8 @@ namespace Model {
         VideoSearch();
 
         void            setValue(const QString &key, const QVariant &value);
-        QVariant        getValue(const QString &key);
+        QVariant        getValue(const QString &key) const;
+        QVariantMap     getValues() const;
 
     private:
         QVariantMap     _values;

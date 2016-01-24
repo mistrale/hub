@@ -105,6 +105,7 @@ void            GUI::EverywhereWindow::createMenu() {
     AWidget     *widget10 = new GUI::ResultSearch(this);
     _menuWidgets["searchButton"] = std::make_pair("resultSearch", widget10);
     connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(getSearchResult()));
+    connect(dynamic_cast<GUI::ResultSearch *>(widget10), SIGNAL(goToResult()), this, SLOT(showResult()));
     widget10->hide();
     ui->gridLayout->addWidget(widget10, 11, 0, 1, 2);
 
@@ -118,6 +119,7 @@ void            GUI::EverywhereWindow::showResult() {
     _current.second->hide();
     _current = _menuWidgets["ResultView"];
     _current.second->show();
+    _current.second->initialize();
 }
 
 void            GUI::EverywhereWindow::getSearchResult() {

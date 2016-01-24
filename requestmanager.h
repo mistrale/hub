@@ -19,6 +19,7 @@ namespace Tool {
                                              const QString &firstname, const QString &lastname, const QString &emailPrivate,
                                              const QString &firstnamePrivate, const QString &lastnamePrivate, const QString &token);
         QNetworkReply   *researchRequest(const QString &search, const QString &provider, const QString &kind, const QString &token);
+        QNetworkReply   *randomGetRequest(const QString &url);
 
         QNetworkAccessManager       *manager;
     };

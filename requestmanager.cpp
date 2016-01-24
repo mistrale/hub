@@ -15,6 +15,14 @@ Tool::RequestManager::~RequestManager() {
     delete manager;
 }
 
+QNetworkReply   *Tool::RequestManager::randomGetRequest(const QString &url) {
+    QUrl        tmp(url);
+    QNetworkRequest request(tmp);
+
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    return manager->get(request);
+}
+
 QNetworkReply   *Tool::RequestManager::researchRequest(const QString &search, const QString &provider,
                                                        const QString &kind, const QString &token) {
     QUrl        url("http://62.210.237.116:8080/search?provider=" + provider + "&kind=" + kind + "&keyword=" + search);

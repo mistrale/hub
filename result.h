@@ -10,6 +10,8 @@
 #include <QPushButton>
 #include <QNetworkReply>
 
+#include "aprovider.h"
+
 namespace Ui {
 class Result;
 }
@@ -26,8 +28,8 @@ namespace GUI {
         void        initialize();
 
     public slots:
-        void        finished(QNetworkReply *reply);
         void        error(QNetworkReply::NetworkError error);
+        void        getFlow(QNetworkReply *reply);
         void        seek(int);
         void        durationChanged(qint64);
         void        volumeChanged(int);
@@ -47,6 +49,8 @@ namespace GUI {
 
         bool            _play;
         bool            _volumeoff;
+
+        std::map<std::string, Tool::AProvider *>    _providers;
     };
 }
 
